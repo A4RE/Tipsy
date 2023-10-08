@@ -12,9 +12,13 @@ class ResultViewController: UIViewController {
 
     @IBOutlet weak var settingsLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
-    
+    var resultForPerson = "$0.0"
+    var tip: Int?
+    var numberOfPersons: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
+        totalLabel.text = resultForPerson
+        settingsLabel.text = "Split between \(numberOfPersons ?? 0) persons, with \(tip ?? 10)% tip"
 
     }
     
